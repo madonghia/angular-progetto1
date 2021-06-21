@@ -1,0 +1,22 @@
+<h2>Sarai avvisato quando il prodotto sarà in saldo!</h2>
+
+<div *ngIf="product">
+
+  <div>
+    <form name="formnotify" id="formnotify">
+      <input type="email" placeholder="Inserisci l'email">
+      <input type="submit">
+    </form>
+  </div>
+
+  <h3>{{ product.name }}</h3>
+  <h4>Prezzo attuale: {{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+
+</div>
+
+<a href="/">
+  <button>
+    Indietro
+</button>
+</a>

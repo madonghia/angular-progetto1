@@ -1,0 +1,34 @@
+<h2>Prodotti</h2>
+
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' details'" [routerLink]="['/products',product.id]">
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">
+    Descrizione: {{ product.description }}
+  </p>
+
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <div fxLayout="column" fxFlex="50">
+      <button (click)="share()">
+    Condividi
+    </button>
+    </div>
+
+    <div fxLayout="column" fxFlex="50">
+      <app-product-alerts [product]="product" [routerLink]="['/notify',product.id]">
+      </app-product-alerts>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
