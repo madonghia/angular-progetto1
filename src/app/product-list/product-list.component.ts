@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { products } from '../products';
 
 @Component({
